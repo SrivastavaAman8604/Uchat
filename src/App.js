@@ -1,11 +1,11 @@
 import { useState , useEffect , useRef } from "react";
-import { Box, Button , Input , Container , VStack , HStack , Avatar, Heading ,Text} from '@chakra-ui/react'
+import { Box, Button , Input , Container , VStack , HStack , Avatar , Heading ,Text} from '@chakra-ui/react'
 import Message from './component/Message.jsx';
 import { onAuthStateChanged , getAuth , GoogleAuthProvider , signInWithPopup , signOut } from 'firebase/auth'
 import { app } from './firebase';
 import { getFirestore , addDoc, collection, serverTimestamp ,onSnapshot , query , orderBy} from 'firebase/firestore'
 // import { async } from "@firebase/util";
-import { FcVideoCall , FcSms ,FcBusinessman} from "react-icons/fc";
+import { FcVideoCall , FcSms ,FcBusinessman  } from "react-icons/fc";
 import SideChat from "./component/SideChat.jsx";
 
 const auth=getAuth(app);
@@ -87,7 +87,7 @@ function App() {
         <VStack h="full" paddingY={"4"}>
             <HStack w={"full"} bg={"whatsapp.400"}>
               <Heading><FcBusinessman/></Heading>
-              <Text>SampleName 0</Text>
+              <Text>SampleName</Text>
             </HStack>
             
           <VStack h={"full"} w={"full"} overflowY={'auto'} css={{"&::-webkit-scrollbar":{
@@ -109,7 +109,8 @@ function App() {
         </VStack>
         </Container>
         <VStack w={"full"} h={"100vh"} style={{paddingTop:"10%"}}>
-          <Avatar size="2xl" name='Aman Srivastava' src='https://bit.ly/broken-link' />
+          <Avatar size="2xl" name='User' src='https://bit.ly/broken-link' />
+          
             <HStack style={{padding:"50px"}}>
               <FcSms size={"45"} />
               <FcVideoCall size={"50"}/>
